@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Incredible India | Travel Booking</title>
+    <title>South Indian Temple Tour</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,15 +14,15 @@
         }
 
         :root {
-            --primary: #e67e22;
-            --secondary: #2c3e50;
-            --accent: #3498db;
-            --light: #ecf0f1;
-            --dark: #34495e;
+            --primary: #4a148c;
+            --secondary: #7b1fa2;
+            --accent: #ffab00;
+            --light: #f3e5f5;
+            --dark: #4a148c;
         }
 
         body {
-            background-color: #f9f9f9;
+            background: linear-gradient(to right, #f3e5f5, #e1bee7);
             color: #333;
             line-height: 1.6;
         }
@@ -35,13 +35,13 @@
 
         /* Header Styles */
         header {
-            background: linear-gradient(to right, var(--secondary), var(--dark));
+            background: linear-gradient(to right, var(--primary), var(--secondary));
             color: white;
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         }
 
         .header-content {
@@ -58,7 +58,7 @@
 
         .logo i {
             font-size: 2rem;
-            color: var(--primary);
+            color: var(--accent);
         }
 
         .logo h1 {
@@ -82,52 +82,23 @@
         }
 
         nav a:hover {
-            color: var(--primary);
+            color: var(--accent);
             background: rgba(255, 255, 255, 0.1);
-        }
-
-        .auth-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .btn {
-            padding: 0.6rem 1.2rem;
-            border-radius: 4px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: none;
-        }
-
-        .btn-login {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-        }
-
-        .btn-signup {
-            background: var(--primary);
-            color: white;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1588416499018-d8c621b1b3cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
             background-size: cover;
             background-position: center;
-            height: 80vh;
+            height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
             margin-bottom: 3rem;
+            border-radius: 0 0 20px 20px;
         }
 
         .hero-content {
@@ -145,38 +116,33 @@
             margin-bottom: 2rem;
         }
 
-        .search-box {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .search-input {
-            flex: 1;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-
-        .search-btn {
-            background: var(--primary);
-            color: white;
-            border: none;
+        .btn {
             padding: 0.8rem 1.5rem;
-            border-radius: 4px;
-            cursor: pointer;
+            border-radius: 50px;
             font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #ff8f00;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         /* Section Styles */
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
-            color: var(--secondary);
+            color: var(--primary);
             position: relative;
         }
 
@@ -185,12 +151,34 @@
             display: block;
             width: 80px;
             height: 4px;
-            background: var(--primary);
+            background: var(--accent);
             margin: 0.5rem auto;
         }
 
-        .destinations {
+        .temple-section {
             padding: 4rem 0;
+        }
+
+        .state-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+
+        .state-tab {
+            padding: 1rem 2rem;
+            background: white;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .state-tab.active {
+            background: var(--primary);
+            color: white;
         }
 
         .cards-container {
@@ -201,9 +189,9 @@
 
         .card {
             background: white;
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
 
@@ -233,24 +221,25 @@
 
         .card h3 {
             margin-bottom: 0.5rem;
-            color: var(--secondary);
+            color: var(--primary);
         }
 
         .card p {
             color: #666;
             margin-bottom: 1rem;
+            font-size: 0.9rem;
         }
 
-        .card-price {
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 1.2rem;
+        .card-location {
+            color: var(--secondary);
+            font-weight: 600;
             margin-bottom: 1rem;
+            display: block;
         }
 
         .card-btn {
             display: inline-block;
-            background: var(--accent);
+            background: var(--primary);
             color: white;
             padding: 0.6rem 1.2rem;
             border-radius: 4px;
@@ -260,59 +249,16 @@
         }
 
         .card-btn:hover {
-            background: #2980b9;
-        }
-
-        /* Food Section */
-        .food-section {
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
-            padding: 4rem 0;
-            color: white;
-        }
-
-        .food-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .food-card {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-        }
-
-        .food-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .food-img {
-            height: 180px;
-            overflow: hidden;
-        }
-
-        .food-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .food-content {
-            padding: 1.5rem;
-            text-align: center;
-            color: #333;
-        }
-
-        .food-content h3 {
-            margin-bottom: 0.5rem;
-            color: var(--secondary);
+            background: var(--secondary);
         }
 
         /* Itinerary Section */
         .itinerary {
             padding: 4rem 0;
+            background: white;
+            border-radius: 20px;
+            margin: 3rem 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
         .itinerary-container {
@@ -322,14 +268,14 @@
         }
 
         .itinerary-card {
-            background: white;
-            border-radius: 8px;
+            background: var(--light);
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .itinerary-header {
-            background: var(--secondary);
+            background: var(--primary);
             color: white;
             padding: 1rem;
             text-align: center;
@@ -354,15 +300,17 @@
         }
 
         .itinerary-content li i {
-            color: var(--primary);
+            color: var(--accent);
             margin-right: 0.5rem;
         }
 
         /* Footer */
         footer {
-            background: var(--secondary);
+            background: linear-gradient(to right, var(--primary), var(--secondary));
             color: white;
             padding: 3rem 0 1rem;
+            border-radius: 20px 20px 0 0;
+            margin-top: 3rem;
         }
 
         .footer-content {
@@ -385,7 +333,7 @@
             left: 0;
             width: 50px;
             height: 2px;
-            background: var(--primary);
+            background: var(--accent);
         }
 
         .footer-section p {
@@ -407,7 +355,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--primary);
+            color: var(--accent);
         }
 
         .social-icons {
@@ -429,7 +377,7 @@
         }
 
         .social-icons a:hover {
-            background: var(--primary);
+            background: var(--accent);
             transform: translateY(-3px);
         }
 
@@ -455,10 +403,65 @@
             .hero h2 {
                 font-size: 2.5rem;
             }
-
-            .search-box {
+            
+            .state-tabs {
                 flex-direction: column;
+                align-items: center;
             }
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .close {
+            float: right;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        /* Temple Details */
+        .temple-detail {
+            margin-top: 1rem;
+        }
+        
+        .temple-detail img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        
+        .detail-item {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .detail-item i {
+            color: var(--primary);
+            margin-right: 10px;
+            font-size: 1.2rem;
         }
     </style>
 </head>
@@ -467,192 +470,176 @@
     <header>
         <div class="container header-content">
             <div class="logo">
-                <i class="fas fa-globe-asia"></i>
-                <h1>Incredible India</h1>
+                <i class="fas fa-om"></i>
+                <h1>South Indian Temple Tour</h1>
             </div>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">Temples</a></li>
                     <li><a href="#">Itineraries</a></li>
-                    <li><a href="#">Hotels</a></li>
-                    <li><a href="#">Food</a></li>
+                    <li><a href="#">Plan Trip</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-            <div class="auth-buttons">
-                <button class="btn btn-login">Login</button>
-                <button class="btn btn-signup">Sign Up</button>
-            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
-            <h2>Discover the Magic of India</h2>
-            <p>Explore ancient monuments, vibrant culture, and breathtaking landscapes</p>
-            <div class="search-box">
-                <input type="text" class="search-input" placeholder="Search destinations, hotels, experiences...">
-                <button class="search-btn">Search</button>
-            </div>
+            <h2>Discover Sacred Temples of South India</h2>
+            <p>Explore the divine architecture and spiritual heritage of Andhra Pradesh and Tamil Nadu</p>
+            <a href="#itinerary" class="btn btn-primary">Plan Your Temple Tour</a>
         </div>
     </section>
 
-    <!-- Popular Destinations -->
-    <section class="destinations container">
-        <h2 class="section-title">Popular Destinations</h2>
-        <div class="cards-container">
-            <!-- Destination 1 -->
+    <!-- Temple Section -->
+    <section class="temple-section container">
+        <h2 class="section-title">Sacred Temples to Visit</h2>
+        
+        <div class="state-tabs">
+            <div class="state-tab active" onclick="showTemples('andhra')">Andhra Pradesh</div>
+            <div class="state-tab" onclick="showTemples('tamil')">Tamil Nadu</div>
+        </div>
+        
+        <div class="cards-container" id="andhra-temples">
+            <!-- Andhra Pradesh Temples -->
             <div class="card">
                 <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80" alt="Taj Mahal">
+                    <img src="https://www.trawell.in/admin/images/upload/022736301Tirumala_Temple_Main.jpg" alt="Tirumala Temple">
                 </div>
                 <div class="card-content">
-                    <h3>Taj Mahal, Agra</h3>
-                    <p>One of the Seven Wonders of the World, this ivory-white marble mausoleum is a symbol of eternal love.</p>
-                    <div class="card-price">From $50/night</div>
-                    <a href="#" class="card-btn">Explore</a>
+                    <span class="card-location">Andhra Pradesh</span>
+                    <h3>Tirumala Venkateswara Temple</h3>
+                    <p>One of the richest and most visited temples in the world, dedicated to Lord Venkateswara.</p>
+                    <a href="#" class="card-btn" onclick="showTempleDetail('tirumala')">Explore</a>
                 </div>
             </div>
-
-            <!-- Destination 2 -->
+            
             <div class="card">
                 <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1580739824572-f54c2763f64e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Varanasi">
+                    <img src="https://www.trawell.in/admin/images/upload/080575064Srikalahasti_Temple_Main.jpg" alt="Srikalahasti Temple">
                 </div>
                 <div class="card-content">
-                    <h3>Varanasi, Uttar Pradesh</h3>
-                    <p>One of the oldest living cities in the world, known for its spiritual significance and ghats along the Ganges.</p>
-                    <div class="card-price">From $40/night</div>
-                    <a href="#" class="card-btn">Explore</a>
+                    <span class="card-location">Andhra Pradesh</span>
+                    <h3>Srikalahasti Temple</h3>
+                    <p>Famous for its Vayu linga, one of the Pancha Bhoota Stalam representing wind.</p>
+                    <a href="#" class="card-btn" onclick="showTempleDetail('srikalahasti')">Explore</a>
                 </div>
             </div>
-
-            <!-- Destination 3 -->
+            
             <div class="card">
                 <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1580193769210-b8d1c049a7d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1774&q=80" alt="Jaipur">
+                    <img src="https://www.trawell.in/admin/images/upload/197546600Amaravati_Temple_Main.jpg" alt="Amaravati Temple">
                 </div>
                 <div class="card-content">
-                    <h3>Jaipur, Rajasthan</h3>
-                    <p>The Pink City known for its stunning palaces, vibrant markets, and rich cultural heritage.</p>
-                    <div class="card-price">From $45/night</div>
-                    <a href="#" class="card-btn">Explore</a>
+                    <span class="card-location">Andhra Pradesh</span>
+                    <h3>Amaravati Amareswara Temple</h3>
+                    <p>Dedicated to Lord Shiva, known for its historical significance and architecture.</p>
+                    <a href="#" class="card-btn" onclick="showTempleDetail('amaravati')">Explore</a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Famous Food Section -->
-    <section class="food-section">
-        <div class="container">
-            <h2 class="section-title">Must-Try Indian Cuisine</h2>
-            <div class="food-container">
-                <!-- Food 1 -->
-                <div class="food-card">
-                    <div class="food-img">
-                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1671&q=80" alt="Butter Chicken">
-                    </div>
-                    <div class="food-content">
-                        <h3>Butter Chicken</h3>
-                        <p>Creamy tomato-based curry with tender chicken pieces</p>
-                    </div>
+        
+        <div class="cards-container" id="tamil-temples" style="display: none;">
+            <!-- Tamil Nadu Temples -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://www.trawell.in/admin/images/upload/023742021Meenakshi_Temple_Main.jpg" alt="Meenakshi Temple">
                 </div>
-
-                <!-- Food 2 -->
-                <div class="food-card">
-                    <div class="food-img">
-                        <img src="https://images.unsplash.com/photo-1593811167562-9cef47bfc5d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Biryani">
-                    </div>
-                    <div class="food-content">
-                        <h3>Biryani</h3>
-                        <p>Fragrant rice dish with spices and meat or vegetables</p>
-                    </div>
+                <div class="card-content">
+                    <span class="card-location">Tamil Nadu</span>
+                    <h3>Meenakshi Amman Temple</h3>
+                    <p>Historic temple dedicated to Parvati and Shiva, known for its stunning architecture.</p>
+                    <a href="#" class="card-btn" onclick="showTempleDetail('meenakshi')">Explore</a>
                 </div>
-
-                <!-- Food 3 -->
-                <div class="food-card">
-                    <div class="food-img">
-                        <img src="https://images.unsplash.com/photo-1603893662172-99cdbe35cb56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1774&q=80" alt="Masala Dosa">
-                    </div>
-                    <div class="food-content">
-                        <h3>Masala Dosa</h3>
-                        <p>Crispy fermented crepe filled with spiced potatoes</p>
-                    </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://www.trawell.in/admin/images/upload/024899944Brihadeeswara_Temple_Main.jpg" alt="Brihadeeswara Temple">
                 </div>
-
-                <!-- Food 4 -->
-                <div class="food-card">
-                    <div class="food-img">
-                        <img src="https://images.unsplash.com/photo-1630918037678-a8f7e0f9c9c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Panipuri">
-                    </div>
-                    <div class="food-content">
-                        <h3>Panipuri</h3>
-                        <p>Hollow crispy puri filled with flavored water and spices</p>
-                    </div>
+                <div class="card-content">
+                    <span class="card-location">Tamil Nadu</span>
+                    <h3>Brihadeeswara Temple</h3>
+                    <p>UNESCO World Heritage site and a brilliant example of Dravidian architecture.</p>
+                    <a href="#" class="card-btn" onclick="showTempleDetail('brihadeeswara')">Explore</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://www.trawell.in/admin/images/upload/024736386Rameswaram_Temple_Main.jpg" alt="Ramanathaswamy Temple">
+                </div>
+                <div class="card-content">
+                    <span class="card-location">Tamil Nadu</span>
+                    <h3>Ramanathaswamy Temple</h3>
+                    <p>One of the twelve Jyotirlinga temples, famous for its long corridors and sacred waters.</p>
+                    <a href="#" class="card-btn" onclick="showTempleDetail('ramanathaswamy')">Explore</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Itinerary Section -->
-    <section class="itinerary container">
-        <h2 class="section-title">Popular Itineraries</h2>
+    <section class="itinerary container" id="itinerary">
+        <h2 class="section-title">Temple Tour Itineraries</h2>
         <div class="itinerary-container">
             <!-- Itinerary 1 -->
             <div class="itinerary-card">
                 <div class="itinerary-header">
-                    <h3>Golden Triangle Tour</h3>
-                    <p>7 Days | Delhi, Agra, Jaipur</p>
+                    <h3>Andhra Pradesh Temple Trail</h3>
+                    <p>5 Days | Tirupati, Srikalahasti, Amaravati</p>
                 </div>
                 <div class="itinerary-content">
-                    <p>Explore India's most famous circuit covering the iconic destinations of North India.</p>
+                    <p>Explore the sacred temples of Andhra Pradesh with this spiritual journey.</p>
                     <ul>
-                        <li><i class="fas fa-hotel"></i> 4-star hotels included</li>
+                        <li><i class="fas fa-temple"></i> Tirumala Venkateswara Temple</li>
+                        <li><i class="fas fa-temple"></i> Srikalahasti Temple</li>
+                        <li><i class="fas fa-temple"></i> Amaravati Amareswara Temple</li>
+                        <li><i class="fas fa-hotel"></i> 4-star accommodation</li>
                         <li><i class="fas fa-bus"></i> AC transportation</li>
-                        <li><i class="fas fa-utensils"></i> Breakfast included</li>
-                        <li><i class="fas fa-ticket-alt"></i> Monument entries</li>
                     </ul>
-                    <div class="card-price">Starting at $599 per person</div>
-                    <a href="#" class="card-btn">Book Now</a>
+                    <a href="#" class="card-btn" onclick="showItinerary('andhra-itinerary')">View Details</a>
                 </div>
             </div>
 
             <!-- Itinerary 2 -->
             <div class="itinerary-card">
                 <div class="itinerary-header">
-                    <h3>Kerala Backwaters</h3>
-                    <p>5 Days | Cochin, Alleppey, Munnar</p>
+                    <h3>Tamil Nadu Temple Circuit</h3>
+                    <p>7 Days | Madurai, Thanjavur, Rameswaram</p>
                 </div>
                 <div class="itinerary-content">
-                    <p>Experience the serene backwaters and lush tea gardens of God's Own Country.</p>
+                    <p>Discover the architectural marvels of Tamil Nadu's ancient temples.</p>
                     <ul>
-                        <li><i class="fas fa-ship"></i> Houseboat stay included</li>
-                        <li><i class="fas fa-hotel"></i> Resort accommodation</li>
-                        <li><i class="fas fa-utensils"></i> All meals included</li>
-                        <li><i class="fas fa-hiking"></i> Nature walks</li>
+                        <li><i class="fas fa-temple"></i> Meenakshi Amman Temple</li>
+                        <li><i class="fas fa-temple"></i> Brihadeeswara Temple</li>
+                        <li><i class="fas fa-temple"></i> Ramanathaswamy Temple</li>
+                        <li><i class="fas fa-hotel"></i> Heritage stays</li>
+                        <li><i class="fas fa-train"></i> First-class train travel</li>
                     </ul>
-                    <div class="card-price">Starting at $449 per person</div>
-                    <a href="#" class="card-btn">Book Now</a>
+                    <a href="#" class="card-btn" onclick="showItinerary('tamil-itinerary')">View Details</a>
                 </div>
             </div>
 
             <!-- Itinerary 3 -->
             <div class="itinerary-card">
                 <div class="itinerary-header">
-                    <h3>Spiritual Journey</h3>
-                    <p>10 Days | Varanasi, Rishikesh, Haridwar</p>
+                    <h3>Complete South Temple Tour</h3>
+                    <p>10 Days | Both States Comprehensive</p>
                 </div>
                 <div class="itinerary-content">
-                    <p>Discover the spiritual heart of India with yoga, meditation, and ancient rituals.</p>
+                    <p>The ultimate spiritual journey through both Andhra Pradesh and Tamil Nadu.</p>
                     <ul>
-                        <li><i class="fas fa-om"></i> Yoga & meditation sessions</li>
-                        <li><i class="fas fa-hotel"></i> Ashram & hotel stay</li>
-                        <li><i class="fas fa-utensils"></i> Vegetarian meals</li>
-                        <li><i class="fas fa-water"></i> Ganga Aarti experience</li>
+                        <li><i class="fas fa-temple"></i> All major temples from both states</li>
+                        <li><i class="fas fa-hotel"></i> Luxury accommodation</li>
+                        <li><i class="fas fa-car"></i> Private AC vehicle</li>
+                        <li><i class="fas fa-utensils"></i> Traditional meals</li>
+                        <li><i class="fas fa-guide"></i> Expert spiritual guide</li>
                     </ul>
-                    <div class="card-price">Starting at $799 per person</div>
-                    <a href="#" class="card-btn">Book Now</a>
+                    <a href="#" class="card-btn" onclick="showItinerary('complete-itinerary')">View Details</a>
                 </div>
             </div>
         </div>
@@ -664,12 +651,12 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>About Us</h3>
-                    <p>Incredible India Travels is dedicated to providing unforgettable experiences across the diverse landscapes and cultures of India.</p>
+                    <p>South Indian Temple Tour is dedicated to providing spiritual journeys through the sacred temples of Andhra Pradesh and Tamil Nadu.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
 
@@ -677,57 +664,236 @@
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Destinations</a></li>
-                        <li><a href="#">Packages</a></li>
-                        <li><a href="#">Special Offers</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Temples</a></li>
+                        <li><a href="#">Itineraries</a></li>
+                        <li><a href="#">Plan Trip</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Travel Street, New Delhi, India</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Temple Street, Chennai, India</p>
                     <p><i class="fas fa-phone"></i> +91 9876543210</p>
-                    <p><i class="fas fa-envelope"></i> info@incredibleindia.com</p>
+                    <p><i class="fas fa-envelope"></i> info@southindiantempletour.com</p>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2023 Incredible India Travels. All rights reserved.</p>
+                <p>&copy; 2023 South Indian Temple Tour. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Modal -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
     <script>
-        // Simple JavaScript for interactive elements
-        document.addEventListener('DOMContentLoaded', function() {
-            // Login/Signup button functionality
-            const loginBtn = document.querySelector('.btn-login');
-            const signupBtn = document.querySelector('.btn-signup');
+        // JavaScript for interactive elements
+        function showTemples(state) {
+            const andhraTemples = document.getElementById('andhra-temples');
+            const tamilTemples = document.getElementById('tamil-temples');
+            const tabs = document.querySelectorAll('.state-tab');
             
-            loginBtn.addEventListener('click', function() {
-                alert('Login feature coming soon!');
-            });
+            if (state === 'andhra') {
+                andhraTemples.style.display = 'grid';
+                tamilTemples.style.display = 'none';
+                tabs[0].classList.add('active');
+                tabs[1].classList.remove('active');
+            } else {
+                andhraTemples.style.display = 'none';
+                tamilTemples.style.display = 'grid';
+                tabs[0].classList.remove('active');
+                tabs[1].classList.add('active');
+            }
+        }
+        
+        function showTempleDetail(temple) {
+            const modal = document.getElementById('infoModal');
+            const modalBody = document.getElementById('modal-body');
             
-            signupBtn.addEventListener('click', function() {
-                alert('Signup feature coming soon!');
-            });
+            let content = '';
             
-            // Search functionality
-            const searchBtn = document.querySelector('.search-btn');
-            searchBtn.addEventListener('click', function() {
-                const searchInput = document.querySelector('.search-input');
-                alert('Searching for: ' + searchInput.value);
-            });
+            if (temple === 'tirumala') {
+                content = `
+                    <h2>Tirumala Venkateswara Temple</h2>
+                    <div class="temple-detail">
+                        <img src="https://www.trawell.in/admin/images/upload/022736301Tirumala_Temple_Main.jpg" alt="Tirumala Temple">
+                        <p>The Tirumala Venkateswara Temple is an important Vaishnavite temple dedicated to Venkateswara, a form of Vishnu, located in Tirumala, Andhra Pradesh.</p>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Tirumala, Andhra Pradesh</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-history"></i>
+                            <span>Best time to visit: September to March</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Open: 3:00 AM - 11:30 PM (except during special events)</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Darshan timings may vary; check official website for current schedule</span>
+                        </div>
+                        
+                        <h3>Nearby Accommodations</h3>
+                        <ul>
+                            <li>TTD Guest Houses: $20-50 per night</li>
+                            <li>Private Hotels: $30-100 per night</li>
+                        </ul>
+                    </div>
+                `;
+            } else if (temple === 'srikalahasti') {
+                content = `
+                    <h2>Srikalahasti Temple</h2>
+                    <div class="temple-detail">
+                        <img src="https://www.trawell.in/admin/images/upload/080575064Srikalahasti_Temple_Main.jpg" alt="Srikalahasti Temple">
+                        <p>Srikalahasti Temple is located in the town of Srikalahasti, Andhra Pradesh. It is one of the most famous Shiva temples and represents the element of Vayu (Air).</p>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Srikalahasti, Andhra Pradesh</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-history"></i>
+                            <span>Best time to visit: October to March</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Open: 6:00 AM - 9:00 PM</span>
+                        </div>
+                        
+                        <h3>Nearby Accommodations</h3>
+                        <ul>
+                            <li>TTD Kalyanamantapam: $15-30 per night</li>
+                            <li>Private Lodges: $20-60 per night</li>
+                        </ul>
+                    </div>
+                `;
+            } else if (temple === 'meenakshi') {
+                content = `
+                    <h2>Meenakshi Amman Temple</h2>
+                    <div class="temple-detail">
+                        <img src="https://www.trawell.in/admin/images/upload/023742021Meenakshi_Temple_Main.jpg" alt="Meenakshi Temple">
+                        <p>Meenakshi Temple is a historic Hindu temple located on the southern bank of the Vaigai River in Madurai, Tamil Nadu. It is dedicated to Meenakshi, a form of Parvati, and her consort, Sundareshwar, a form of Shiva.</p>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Madurai, Tamil Nadu</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-history"></i>
+                            <span>Best time to visit: October to March</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Open: 5:00 AM - 12:30 PM, 4:00 PM - 9:30 PM</span>
+                        </div>
+                        
+                        <h3>Nearby Accommodations</h3>
+                        <ul>
+                            <li>Heritage Hotels: $40-120 per night</li>
+                            <li>Budget Hotels: $20-50 per night</li>
+                        </ul>
+                    </div>
+                `;
+            }
             
-            // Explore buttons functionality
-            const exploreBtns = document.querySelectorAll('.card-btn');
-            exploreBtns.forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const cardTitle = this.closest('.card').querySelector('h3').textContent;
-                    alert('Exploring: ' + cardTitle);
-                });
+            modalBody.innerHTML = content;
+            modal.style.display = 'flex';
+        }
+        
+        function showItinerary(itinerary) {
+            const modal = document.getElementById('infoModal');
+            const modalBody = document.getElementById('modal-body');
+            
+            let content = '';
+            
+            if (itinerary === 'andhra-itinerary') {
+                content = `
+                    <h2>Andhra Pradesh Temple Trail</h2>
+                    <p><strong>Duration:</strong> 5 Days</p>
+                    <p><strong>Price:</strong> Starting at $299 per person</p>
+                    <h3>Day-wise Plan:</h3>
+                    <ul>
+                        <li>Day 1: Arrival in Tirupati, evening darshan at Tirumala Temple</li>
+                        <li>Day 2: Morning darshan, travel to Srikalahasti</li>
+                        <li>Day 3: Srikalahasti Temple visit, travel to Amaravati</li>
+                        <li>Day 4: Amaravati Amareswara Temple visit, local sightseeing</li>
+                        <li>Day 5: Departure</li>
+                    </ul>
+                    <p><strong>Includes:</strong> Accommodation, transportation, temple guidance, breakfast</p>
+                    <h3>Hotels:</h3>
+                    <ul>
+                        <li>Tirupati: Mayura Hotels ($40-60/night)</li>
+                        <li>Srikalahasti: TTD Guest Houses ($20-40/night)</li>
+                        <li>Amaravati: Heritage Hotels ($50-80/night)</li>
+                    </ul>
+                `;
+            } else if (itinerary === 'tamil-itinerary') {
+                content = `
+                    <h2>Tamil Nadu Temple Circuit</h2>
+                    <p><strong>Duration:</strong> 7 Days</p>
+                    <p><strong>Price:</strong> Starting at $499 per person</p>
+                    <h3>Day-wise Plan:</h3>
+                    <ul>
+                        <li>Day 1: Arrival in Madurai</li>
+                        <li>Day 2: Meenakshi Amman Temple visit</li>
+                        <li>Day 3: Travel to Thanjavur, Brihadeeswara Temple visit</li>
+                        <li>Day 4: Explore Thanjavur Palace and other temples</li>
+                        <li>Day 5: Travel to Rameswaram</li>
+                        <li>Day 6: Ramanathaswamy Temple visit, Dhanushkodi excursion</li>
+                        <li>Day 7: Departure</li>
+                    </ul>
+                    <p><strong>Includes:</strong> Accommodation, transportation, guide services, breakfast</p>
+                `;
+            }
+            
+            modalBody.innerHTML = content;
+            modal.style.display = 'flex';
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('infoModal');
+            modal.style.display = 'none';
+        }
+        
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('infoModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>
